@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <title>Frontend Mentor | Gamer sign-up form</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="two-to-one-columns">
+      <div class="left-side">
+        <img src="./assets/images/logo.svg" alt="logo">
+        <h1> <span class="lime-span">//</span> JOIN THE <br>NEXUS</h1>
+        <p class="under-h1-p">INITIALIZE YOUR NEONCORE IDENTITY</p>
+        <hr class="under-h1-hr">
+        <div class="operator-id">
+          <span>OPERATOR ID</span>
+          <span id="counter-span">0/5 READY</span>
+        </div>
+        <h2>UNASSIGNED</h2>
+        <div>
+          <div class="unassigned-check">
+            <span>CALLSIGN</span>
+          <hr>
+          <span id="pending-1">Pending</span>
+          </div>
+
+          <div class="unassigned-check">
+            <span>EMAIL</span>
+          <hr>
+          <span id="pending-2">Pending</span>
+          </div>
+
+          <div class="unassigned-check">
+            <span>PASSWORD</span>
+          <hr>
+          <span id="pending-3">Pending</span>
+          </div>
+
+          <div class="unassigned-check">
+            <span>CONFIRM</span>
+          <hr>
+          <span id="pending-4">Pending</span>
+          </div>
+
+          <div class="unassigned-check">
+            <span>TERMS</span>
+          <hr>
+          <span id="pending-5">Pending</span>
+          </div>
+        </div>
+      </div>
+      <div class="right-side">
+          <div class="form-top">
+            <span>NEW OPERATOR</span>
+            <p>ALL FIELDS REQUIED</p>
+          </div>
+          <hr>
+          <form class="register-form">
+            <h3><span class="lime-span">> </span>CALLSIGN</h3>
+            <input id="callsign-input" class="register-input-callsign" type="text" placeholder="e. g. Vortex_07">
+            <h5>3-20 characters: letters, numbers, _ or -</h5>
+            
+            <h3><span class="lime-span">> </span>EMAIL</h3>
+            <input id="email-input" class="register-input" type="email" placeholder="you@example.com" oninput="this.style.borderColor = this.value.includes('@') && this.value.includes('.') ? 'hsl(77 67% 39%)' : 'hsl(4 100% 74%)'">
+            
+            
+            <h3><span class="lime-span">> </span>Password</h3>
+            <div class="input-wrapper">
+              <input id="pswd" class="register-input-password" type="password">
+              <button id="toggleIcon" type="button" class="toggle-pswd" onclick="togglePasswordVisibility()">
+              </button>
+            </div>
+
+            <p class="password-p">min 8 chars, 1 uppercase, 1 lowercase, 1 digit, 1 special char</p>
+            
+            <h3><span class="lime-span">> </span>CONFIRM PASSWORD</h3>
+            <div class="input-wrapper">
+              <input id="pswdconfirm" class="register-input-password" type="password">
+              <button id="toggleIcon" type="button" class="toggle-pswd" onclick="togglePasswordVisibility()">
+              </button>
+            </div>
+  
+            <div class="terms-and-privacy">
+              <label>
+                <input type="checkbox">
+                <span>I accept the <span class="lime-span"><a href="#">Terms</a></span> and <span class="lime-span"><a href="#">Privacy Policy.</a></span></span>
+              </label>
+            </div>
+  
+            <button class="btn"> INITIALIZE ACCOUNT</button>
+  
+            <p class="login-span">ALredy an operator? <span class="lime-span"><a href="#">Log in.</a></span></p>
+          </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

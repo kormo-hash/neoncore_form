@@ -1,0 +1,339 @@
+:root{
+    --cl-neutral-950 : hsl(214 37% 4%);
+    --cl-neutral-900: hsl(210 39% 7%); 
+    --cl-neutral-800: hsl(211 30% 13%);
+    --cl-neutral-700: hsl(211 22% 24%);
+    --cl-neutral-600: hsl(210 18% 42%);
+    --cl-neutral-500: hsl(211 14% 50%);
+    --cl-neutral-400: hsl(211 13% 55%);
+    --cl-neutral-300: hsl(211 18% 68%);
+    --cl-neutral-100: hsl(208 49% 92%);
+    --cl-neutral-50: hsl(204 60% 97%);
+    
+    --cl-lime-500:hsl(77 90% 59%);
+    --cl-lime-700:hsl(77 67% 39%);
+
+    --cl-red-400:hsl(4 100% 74%);
+
+    --cl-amber-400: hsl(40 100% 65%);
+
+    --cl-navy--950: hsl(214 60% 2%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html,body{
+    height: 100%;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body{
+    background-color: var(--cl-neutral-950);
+    color: var(--cl-neutral-400);
+    font-family: "JetBrains Mono", monospace;
+}
+.container{
+    display: grid;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.two-to-one-columns{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+.lime-span{
+    color: var(--cl-lime-500);
+}
+.terms-and-privacy{
+    display: flex;
+}
+h1{
+    font-size: 3rem;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    color: var(--cl-neutral-50);
+    margin-bottom: 20px;
+}
+.left-side{
+    max-width: 35rem;
+}
+.left-side img{
+    margin-bottom: 5rem;
+}
+.under-h1-p {
+    font-size: 12px;
+    margin-bottom: 3rem;
+}
+.under-h1-hr{
+    opacity: 50%;
+    border: 1px solid var(--cl-neutral-400);
+    margin-bottom: 2rem;
+}
+.operator-id{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.left-side h2{
+    font-size: 2rem;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.unassigned-check{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+hr{
+    flex-grow: 0.9;
+    height: 1px;
+    border: 1px solid var(--cl-neutral-400);
+    opacity: 50%;
+}
+.right-side{
+    position: relative;
+    padding: 2rem;
+    background-color: var(--cl-neutral-900);
+    border: 1px solid var(--cl-neutral-700);
+}
+.right-side::before{
+  content: "";
+  position: absolute;
+  top: -1px;  
+  left: -1px;
+  
+  width: 24px; 
+  height: 24px; 
+  
+  border-top: 2px solid var(--cl-lime-500);
+  border-left: 2px solid var(--cl-lime-500);
+  
+  pointer-events: none;
+}
+.right-side::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 24px;
+  height: 24px;
+  border-bottom: 2px solid var(--cl-lime-500);
+  border-right: 2px solid var(--cl-lime-500);
+  pointer-events: none;
+}
+.form-top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.right-side hr{
+    margin-bottom: 1rem;
+}
+.form-top span{
+    color: var(--cl-neutral-100);
+    font-size: 12px;
+}
+.form-top p{
+    font-size: 12px;
+}
+.register-form h3{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.register-form h5{
+    font-size: 10px;
+    margin-bottom: 1rem;
+}
+.register-input{
+    height: 2.5rem;
+    border: 1px solid var(--cl-neutral-700);
+    background-color: var(--cl-navy--950);
+    width: 25rem;
+    padding: 20px;
+    margin-bottom: 1rem;
+    letter-spacing: 1.6px;
+    font-size: 14px;
+    color: white;
+}
+.register-input-callsign{
+    height: 2.5rem;
+    border: 1px solid var(--cl-neutral-700);
+    background-color: var(--cl-navy--950);
+    width: 25rem;
+    padding: 20px;
+    margin-bottom: 1rem;
+    letter-spacing: 1.6px;
+    font-size: 14px;
+    color: white;
+}
+.register-input-callsign.valid{
+    border-color: var(--cl-lime-700);
+}
+.register-input-callsign.invalid{
+    border-color: var(--cl-red-400);
+}
+.register-input-password{
+    height: 2.5rem;
+    border: 1px solid var(--cl-neutral-700);
+    background-color: var(--cl-navy--950);
+    width: 25rem;
+    padding: 20px;
+    margin-bottom: 1rem;
+    letter-spacing: 1.6px;
+    font-size: 14px;
+    color: white;
+}
+.register-input-password.valid{
+    border-color: var(--cl-lime-700);
+}
+.register-input-password.invalid{
+    border-color: var(--cl-red-400);
+}
+.register-input:focus , .register-input-password:focus , .register-input-callsign{
+    outline: none;
+}
+.password-p{
+    font-size: 10px;
+    margin-bottom: 1rem;
+}
+.terms-and-privacy label {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+input[type="checkbox"]{
+    background-color: var(--cl-navy--950);
+    margin-top: 1rem;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    outline: 2px solid var(--cl-neutral-700);
+    accent-color: var(--cl-navy--950);
+}
+.terms-and-privacy span{
+    margin-top: 1rem;
+    font-size: 14px;
+}
+.btn{
+    width: 25rem;
+    padding: 20px;
+    letter-spacing: 1.6px;
+    background-color: var(--cl-lime-500);
+    font-weight: 700;
+    cursor: pointer;
+    margin: 1rem 0;
+
+}
+.btn:hover{
+    background-color: var(--cl-lime-700);
+}
+.login-span{
+    place-self: center;
+}
+.toggle-pswd{
+    background-image: url(./assets/images/icon-eye.svg);
+    height: 20px;
+    width: 20px;
+    background-color: var(--cl-navy--950);
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    right: 2%;
+}
+.toggle-pswd.is-visible{
+    background-image: url(./assets/images/icon-eye-off.svg);
+}
+
+.input-wrapper{
+    display: inline-block;
+    position: relative;
+}
